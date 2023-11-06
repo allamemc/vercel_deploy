@@ -1,22 +1,12 @@
 {
     "version": 2,
-    "builds": [
-        {
-            "src": "./index.js",
-            "use": "@vercel/node"
-        }
-    ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/"
-        },
-        {
-            "handle": "filesystem"
-          },
-          {
-            "src": "/public/(.*)",
-            "destination": "/public/$1"
-          }
+      { "handle": "filesystem" },
+      {
+        "src": "/public/(.*)",
+        "status": 200,
+        "headers": { "Cache-Control": "public, max-age=3600" }
+      }
     ]
-}
+  }
+  
