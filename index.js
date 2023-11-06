@@ -9,7 +9,7 @@ app.listen(PORT, () => {
 });
 
 app.get("/", (req, res) => {
-  res.redirect("./public/index.html");
+  res.send("Hola desde vercel");
 });
 
 // Export the Express API
