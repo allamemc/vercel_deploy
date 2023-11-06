@@ -8,10 +8,8 @@ app.listen(PORT, () => {
   console.log(`API listening on PORT ${PORT} `);
 });
 
-app.use(express.static("public"));
-
 app.get("/", (req, res) => {
-  res.redirect("index.html");
+  res.redirect("./public/index.html");
 });
 
 // Export the Express API
